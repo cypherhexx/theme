@@ -1,0 +1,32 @@
+{
+  "name": "livestyled",
+  "version": "1.0.0",
+  "description": "WordPress theme for Livestyled",
+  "main": "../index.php",
+  "scripts": {
+    "gulp": "gulp",
+    "docs": "docsify serve docs-general"
+  },
+  "author": "Rob Watson",
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cache": "^1.1.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-jshint": "^2.1.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "jshint": "^2.9.7",
+    "node-sass": "^4.11.0",
+    "rimraf": "^2.6.3",
+    "run-sequence": "^2.2.1",
+    "sassdoc": "^2.5.1"
+  },
+  "dependencies": {
+    "hamburgers": "^1.1.3"
+  }
+}

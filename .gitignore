@@ -1,0 +1,86 @@
+*.log
+wp-config-sample.php
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/uploads/
+wp-content/wp-cache-config.php
+wp-content/wphb-cache/
+
+wp-content/themes/twentyfifteen/
+wp-content/languages/themes/twentyfifteen-en_GB.mo
+wp-content/languages/themes/twentyfifteen-en_GB.po
+
+wp-content/themes/twentysixteen/
+wp-content/languages/themes/twentysixteen-en_GB.mo
+wp-content/languages/themes/twentysixteen-en_GB.po
+
+wp-content/themes/twentyseventeen/
+wp-content/languages/themes/twentyseventeen-en_GB.mo
+wp-content/languages/themes/twentyseventeen-en_GB.po
+
+wp-content/themes/twentynineteen/
+wp-content/languages/themes/twentynineteen-en_GB.mo
+wp-content/languages/themes/twentynineteen-en_GB.po
+
+wp-content/plugins/akismet/
+wp-content/languages/plugins/akismet-en_GB.mo
+wp-content/languages/plugins/akismet-en_GB.po
+
+wp-content/plugins/hello.php
+
+/license.txt
+/readme.html
+/sitemap.xml
+/sitemap.xml.gz
+
+# Sass
+.sass-cache
+.sass-cache/*
+
+# NPM, Bower, Vagrant etc...
+bower_components
+node_modules
+dist
+test
+tests
+.vagrant
+.bundle
+.idea/
+Movefile
+docs
+
+# OSX
+.DS_Store
+
+# Windows
+*.tmp
+Thumbs.db
+ehthumbs.db
+
+# Word temporary
+~$*.doc*
+
+# Excel temporary
+~$*.xls*
+
+# Excel Backup File
+*.xlk
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk

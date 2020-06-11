@@ -1,0 +1,67 @@
+# Translation of Development (trunk) in English (UK)
+# This file is distributed under the same license as the Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2014-04-10 07:37:05+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/1.0-alpha-1000\n"
+"Project-Id-Version: Development (trunk)\n"
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/extend/plugins/rss-importer/"
+msgstr "http://wordpress.org/extend/plugins/rss-importer/"
+
+#. Author URI of the plugin/theme
+msgid "http://wordpress.org/"
+msgstr "http://wordpress.org/"
+
+#. Author of the plugin/theme
+msgid "wordpressdotorg"
+msgstr "wordpressdotorg"
+
+#. Description of the plugin/theme
+msgid "Import posts from an RSS feed. This plugin depends on the WP_Importer base class."
+msgstr "Import posts from an RSS feed. This plugin depends on the WP_Importer base class."
+
+#. Plugin Name of the plugin/theme
+msgid "RSS Importer"
+msgstr "RSS Importer"
+
+#: rss-importer.php:219
+msgid "Import posts from an RSS feed."
+msgstr "Import posts from an RSS feed."
+
+#: rss-importer.php:219
+msgid "RSS"
+msgstr "RSS"
+
+#: rss-importer.php:185
+msgid "All done. <a href=\"%s\">Have fun!</a>"
+msgstr "All done. <a href=\"%s\">Have fun!</a>"
+
+#: rss-importer.php:160
+msgid "Done!"
+msgstr "Done!"
+
+#: rss-importer.php:154
+msgid "Couldn&#8217;t get post ID"
+msgstr "Couldn&#8217;t get post ID"
+
+#: rss-importer.php:148
+msgid "Post already imported"
+msgstr "Post already imported"
+
+#: rss-importer.php:143
+msgid "Importing post..."
+msgstr "Importing post..."
+
+#: rss-importer.php:50
+msgid "Import RSS"
+msgstr "Import RSS"
+
+#: rss-importer.php:59
+msgid "Howdy! This importer allows you to extract posts from an RSS 2.0 file into your WordPress site. This is useful if you want to import your posts from a system that is not handled by a custom import tool. Pick an RSS file to upload and click Import."
+msgstr "Hi there! This importer allows you to extract posts from an RSS 2.0 file into your WordPress site. This is useful if you want to import your posts from a system that is not handled by a custom import tool. Pick an RSS file to upload and click Import."

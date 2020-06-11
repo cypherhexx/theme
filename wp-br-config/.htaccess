@@ -1,0 +1,13 @@
+# BEGIN - block access to directory
+<LIMIT GET>
+order deny,allow
+deny from all
+</LIMIT>
+# END - block access to directory
+
+# BEGIN - Secure config files
+<FilesMatch "wp-config\.development\.php|wp-config\.production\.php|wp-config\.staging\.php">
+	order allow,deny
+	deny from all
+</FilesMatch>
+# END - Secure config files

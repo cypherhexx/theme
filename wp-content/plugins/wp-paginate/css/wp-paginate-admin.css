@@ -1,0 +1,228 @@
+.paginate-info, .mf-plugins {
+	color: #000;
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 30px;
+	text-align: center;
+}
+
+.wpp-plugin-title {
+	color: #000;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 30px;
+	margin-top: 10px;
+  padding-right: 0px;
+	text-align: center;	
+}
+
+.wpp-plugin-title a {
+	color: #000;
+}
+
+.mf-plugins {
+	margin: 20px 0 50px;
+}
+
+.wpp-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+div.col-sm-4.center-block a img {
+	height: auto;
+	width: 283px;
+	display: block;
+}
+
+.updated.notice.wpp-notice {
+	display: block;
+	height: 150px;
+}
+
+#wpp-notice-1 {
+	display: block;
+	float: left;
+	height: 128px;
+	margin: 10px;
+}
+
+#wpp-notice-title {
+	font-size: 24px !important;
+	margin: 4px 0;
+}
+
+#wp-paginate-logo {
+	background: rgba(0, 0, 0, 0) url("../images/wp-paginate-logo.png") no-repeat scroll 0 0;
+	display: block;
+	float: left;
+	height: 128px;
+	margin: 10px;
+	width: 128px;
+}
+
+ul#wpp-review-notice-links li {
+	display: inline-block;
+	float: left;
+	margin-right: 20px;
+}
+
+a.dashicons.dashicons-dismiss.close-wpp-notice {
+	float: right;
+	line-height: 148px;
+}
+
+a#wpp-review-already, a#wpp-review-later, a#wpp-write-review, a#wpp-dismiss {
+	cursor: pointer;
+}
+
+.wpp-color-button {
+	margin-top: -4px;
+}
+
+.wpp-colpick {
+	width: 100px;
+}
+
+td.mg-align-top {
+	vertical-align: top;
+}
+
+#wpp-plugins {
+	height: 380px;
+	max-width: 1100px
+}
+
+.column-left {
+	float: left;
+	width: 280px;
+	padding: 0 3%;
+}
+.column-center {
+	float: left;
+	width: 280px;
+	padding: 0 3%;
+}
+.column-right {
+	float: left;
+	width: 280px;
+	padding: 0 3%;
+}
+
+.column-right img,
+.column-center img, 
+.column-left img {
+	display: block;
+	height: auto;
+	max-width: 283px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.wpp-plugin-title {
+	text-align: center;
+}
+
+#utp-content {
+	width: 100%;
+}
+
+#mf-logo {
+	float: right;
+	margin-top: 30px;
+}
+
+.buy-now-button {
+	display: block;
+	height: 68px;
+	margin: 0 auto;
+	width: 205px;
+}
+
+#utp-title-wrap {
+	position: relative
+}	
+
+#utp-title {
+	float: left;
+	font-size: 40px;
+	margin-top: 24px;
+	position: absolute;
+	text-align: left;
+	width: 400px;
+}
+
+#wppp-logo {
+	display: block;
+	height: 61px; 
+	margin: 40px auto 0;
+	width: 169px;
+}
+
+#wppp-buttons img {
+	display: block;
+	height: auto;
+	margin: 50px auto 0;
+	max-width: 646px;
+	width: 100%;
+}
+
+.utp-text {
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 43px;
+	text-align: center;
+	margin-top: 20px; 
+}
+
+#wppp-customizer img {
+	display: block;
+	height: auto;
+	margin: 50px auto 0;
+	max-width: 650px;
+	width: 100%;	
+}
+
+@media (max-width: 1168px) {
+	
+  #utp-title-wrap {
+	  position: static;
+  }	
+	
+  #utp-title {
+    float: none;
+    font-size: 40px;
+		line-height: 50px;
+    margin-top: 24px;
+    position: static;
+    text-align: left;
+    width: 100%;
+    padding-bottom: 50px;
+  }
+	
+}
+
+@media (max-width: 768px) {
+
+	.column-left,	
+	.column-center,
+	.column-right {
+		position: static;
+		width: 100%;
+		margin-left: auto;
+	}	
+	
+	.column-center, 
+	.column-left {
+		margin-bottom: 30px;
+  }	
+		
+}
+
+@media (max-width: 680px) {
+	#utp-title {
+		text-align: center;
+	}
+}

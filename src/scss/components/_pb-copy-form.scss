@@ -1,0 +1,11 @@
+.copy-form__description {
+    max-width: 450px;
+    margin: 20px auto 30px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    font-weight: 300;
+
+    @include lg-up {
+        margin: 30px auto 50px;
+    }
+}

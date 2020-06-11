@@ -1,0 +1,48 @@
+// --------------------------------------------------------------------------------------------------
+// Carousel
+// --------------------------------------------------------------------------------------------------
+
+.carousel__arrow {
+  position: absolute;
+  top: 45%;
+  right: 0;
+  transform: translateY(-50%);
+  background: $highlightGreen;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  transition: .3s;
+  display: none;
+
+  @include lg-up {
+      display: block;
+  }
+
+  &:hover {
+      background: lighten($highlightGreen, 5%);
+  }
+
+  .section--our-partners &,
+  .section--our-clients & {
+      top: 60%;
+      background: $highlightPink;
+
+      &:hover {
+        background: lighten($highlightPink, 5%);
+    }
+  }
+
+  &--left {
+      left: 0;
+      opacity: 0.5;
+  }
+
+  &:focus {
+      outline: none;
+  }
+
+  .icon {
+      width: 2em;
+      height: 2em;
+  }
+}

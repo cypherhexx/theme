@@ -1,0 +1,64 @@
+// --------------------------------------------------------------------------------------------------
+// Blog Filters
+// --------------------------------------------------------------------------------------------------
+
+.country-selector {
+    background: $primary;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    z-index: 1001;
+    position: relative;
+
+    .txt {
+        display: none;
+        margin: 0;
+        @include align-self(center);
+
+        @include lg-up {
+            display: inline-block;
+            font-size: .8rem;
+            margin-right: 30px;
+        }
+    }
+    
+    select {
+        background: $primary;
+        border: 2px solid #fff;
+        color: #fff;
+        padding: 7px 40px 7px 12px;
+        border-radius: 20px;
+        -webkit-appearance: none;
+        appearance: none;
+        font-size: .8rem;
+        width: calc(60% - 10px);
+        margin-right: 10px;
+        max-width: 250px;
+        transition: .3s;
+
+        &:hover {
+            border-color: $highlightPink;
+        }
+    }
+    
+    .continue {
+        width: 40%;
+        max-width: 150px;
+    }
+
+    &__close {
+        color: #fff;
+        margin-left: 10px;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover {
+            color: $highlightPink;
+        }
+
+        .icon {
+            width: 1.3em;
+            height: 1.3em;
+        }
+    }
+}

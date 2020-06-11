@@ -1,0 +1,9 @@
+.dashicons-admin-ip2location{background-image:url("../img/icon.png");background-repeat:no-repeat;background-position:50% 50%}
+#ip2location-download-progress{display:none}
+.loading-admin-ip2location{background-image:url("../img/loading.gif");background-repeat:no-repeat;background-position:50% 50%;display:inline-block;width:24px;height:24px;transform:translateY(+25%)}
+.wp-list-table thead tr th{padding-left:10px}
+.wp-list-table tbody tr td{vertical-align:text-top}
+.button-add-rule{background-image:url("../img/add.png");background-repeat:no-repeat;background-position:50% 50%;display:inline-block;width:16px;height:16px}
+.button-remove-rule{background-image:url("../img/delete.png");background-repeat:no-repeat;background-position:50% 50%;display:inline-block;width:16px;height:16px}
+.url-container,.domain-container{padding:5px 0}
+.url-container input,.domain-container input[type="text"]{margin:0;width:100%}

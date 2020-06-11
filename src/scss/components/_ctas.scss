@@ -1,0 +1,95 @@
+.cta {
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	background: $highlightPink;
+	color: $White;
+	border-radius: 25px;
+	width: 100%;
+	transition: .3s;
+
+	&:hover {
+		transform: scale(1.05);
+	}
+
+	@include sm-up {
+		width: auto;
+	}
+
+	+ .cta {
+		margin-top: 10px;
+
+		@include sm-up {
+			width: auto; 
+			margin: 0 0 0 20px;
+		}
+	}
+
+	&--sm {	
+		font-size: .85rem;
+		line-height: 1.4;
+		padding: 8px 20px;
+	
+	}
+
+	&--md {
+		font-size: 1rem;
+		line-height: 1.6;
+		padding: 12px 30px; 
+	
+	}
+	
+	&--lg { 
+		font-size: 1.2rem;
+		line-height: 1.8;
+		padding: 15px 40px;
+		border-radius: 40px;
+		
+	}
+
+	&--compare { 
+		font-size: 1.2rem;
+		line-height: 1.8;
+		background: $Crimson;
+		color: $White;
+		padding: 15px 40px;
+		
+	}
+
+	&--white {
+		background-color: $White;
+		color: $primary;
+	}
+
+	&--dark-blue {
+		background-color: $primary;
+		color: $White;
+	}
+
+	&--green {
+		background-color: $highlightGreen;
+		color: $White;
+	}
+
+	&--ghost {
+		background-color: transparent;
+		border: 2px solid $highlightPink;
+		color: $highlightPink;
+
+		&.cta--white {
+			border-color: $White;
+			color: $White;
+		}
+
+		&.cta--dark-blue {
+			border-color: $primary;
+			color: $primary;
+		}
+
+		&.cta--green {
+			border-color: $highlightGreen;
+			color: $highlightGreen;
+		}
+	}
+
+}

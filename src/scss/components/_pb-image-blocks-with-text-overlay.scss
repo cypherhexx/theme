@@ -1,0 +1,65 @@
+// --------------------------------------------------------------------------------------------------
+// Page Builder - Image Blocks With Text Overlay
+// --------------------------------------------------------------------------------------------------
+
+.ibwto {
+    margin-top: 30px;
+
+    @include md-up {
+        margin-top: 50px;
+    }
+
+    &__item {
+        padding: 15px;
+        position: relative;
+        overflow: hidden;
+
+        &:hover .ibwto__text-overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    &__text-overlay {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: calc(100% - 30px);
+        height: calc(100% - 30px);
+        background-color: rgba($primary, .9);
+        color: #fff;
+        border-radius: 20px;
+        padding: 15px;
+        z-index: 10;
+        transition: .3s;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    p {
+        font-size: .9rem;
+    }
+
+    &.grid--5 {
+		.block { width: 100%; }
+        
+        @include sm-up {
+			.block { width: 50%; }
+        }
+        
+        @include md-up {
+			.block { width: 33.333%; }
+		}
+		
+		@include xl-up {
+			.block { width: 20%; }
+		}
+		
+	}
+}

@@ -1,0 +1,119 @@
+// --------------------------------------------------------------------------------------------------
+// Page Builder - Copy & Image
+// --------------------------------------------------------------------------------------------------
+
+.section--copy-image-boxed {
+    padding: 0;
+
+    .block {
+        @include md-up {
+            min-height: 50vw;
+            max-width: 50vw;
+        }
+        @include xxl-up {
+            height: 50vw;
+        }
+    }
+
+    .cta {
+        margin-top: 25px;
+
+        @include lg-up {
+            margin-top: 40px;
+        }
+    }
+
+    ul, ol {
+        overflow: hidden;
+        @include flexbox;
+        @include flex-wrap(wrap);
+    }
+
+    li {
+        position: relative;
+        padding-left: 30px;
+        width: 100%;
+
+        &:before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: $highlightGreen;
+            margin-right: 10px;
+            display: inline-block;
+
+            @include md-up {
+                position: absolute;
+                position: absolute;
+                top: 17px;
+                left: 0;
+            }
+        }
+
+        @include md-up {
+            width: 50%;
+            float: left;
+            padding: 10px 10px 10px 20px;
+        }
+    }
+}
+
+.section:not(.section--copy-image-boxed) + .section--copy-image-boxed {
+    border-top: 1px solid #eee;
+}
+
+.box-sub-container {
+    padding: 40px 30px;
+    text-align: center;
+    width: 100%;
+    max-height: 100%;
+
+    &--image {
+        height: 100%;
+    }
+
+    @include sm-up {
+        padding: 60px 40px;
+    }
+
+    @include md-up {
+        max-width: 700px;
+        text-align: left;
+    }
+
+    @include lg-up {
+        padding: 60px;
+    }
+
+    @include xl-up {
+        padding: 80px 100px;
+    }
+}
+
+.block--boxed-image {
+    @include order(1);
+
+    @include md-up {
+        @include order(0);
+    }
+}
+
+.section__header-icon {
+    max-width: 80px;
+    display: block;
+    margin: 0 auto 25px;
+
+    @include md-up {
+        margin: 0 0 25px;
+    }
+}
+
+.img--boxed {
+    max-width: 100%;
+
+    &[src$=".svg"] {
+        width: 100%;
+        max-height: 90%;
+    }
+}

@@ -1,0 +1,12 @@
+//https://css-tricks.com/snippets/jquery/simple-jquery-accordion/
+(function ($) {
+
+	var allPanels = $('.accordion > dd').hide();
+
+	$('.accordion > dt > a').click(function () {
+		allPanels.slideUp();
+		$(this).parent().next().slideDown();
+		return false;
+	});
+
+})(jQuery);

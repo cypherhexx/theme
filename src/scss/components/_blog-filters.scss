@@ -1,0 +1,77 @@
+// --------------------------------------------------------------------------------------------------
+// Blog Filters
+// --------------------------------------------------------------------------------------------------
+
+.blog-filters {
+    position: relative;
+
+    @include md-up {
+        margin-bottom: 30px;
+    }
+
+    &__label {
+        display: inline-block;
+        cursor: pointer;
+        width: 100%;
+        margin-left: 0;
+
+        @include md-up {
+            width: auto;
+        }
+
+        + .cta {
+            width: 100%;
+            margin-top: 10px;
+            margin-left: 0;
+
+            @include md-up {
+                width: auto;
+                margin-left: 10px;
+            }
+        }
+
+        &.active {
+            background-color: $primary;
+        }
+    }
+
+    &__input {
+        position: fixed;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -150px;
+        left: calc(50% - 15px);
+        width: 30px;
+        height: 5px;
+        border-left: 3px solid #c22425;
+        border-right: 3px solid #c22425;
+        display: none;
+    }
+
+    &.active:after {
+        display: block;
+        animation: loader .8s linear infinite;
+    }
+}
+
+@keyframes loader{to{transform:rotate(360deg)}}
+
+.post-list {
+    transition: .4s;
+}
+
+.blog-load-more {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+        color: $highlightPink;
+    }
+}

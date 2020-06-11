@@ -1,0 +1,238 @@
+/**
+  BREAKPOINT MIXIN
+*/
+$screen-xs-min: 425px;
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+$screen-xxl-min: 1400px;
+$screen-xxxl-min: 1600px;
+
+$screen-md-max: 767px;
+
+
+
+/// Media query for a max size of $screen-sm-min set inside settings > breakpoints
+/// @example .foo { @include sm-up {...} }
+/// @require settings/_breakpoints.scss
+@mixin sm-up {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+/// Media query for a max size of $screen-md-min set inside settings > breakpoints
+/// @example .foo { @include md-up {...} }
+/// @require settings/_breakpoints.scss
+@mixin md-up {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+/// Media query for a max size of $screen-lg-min set inside settings > breakpoints
+/// @example .foo { @include lg-up {...} }
+/// @require settings/_breakpoints.scss
+@mixin lg-up {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+/// Media query for a max size of $screen-xl-min set inside settings > breakpoints
+/// @example .foo { @include xl-up {...} }
+/// @require settings/_breakpoints.scss
+@mixin xl-up {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+/// Media query for a max size of $screen-xl-min set inside settings > breakpoints
+/// @example .foo { @include xl-up {...} }
+/// @require settings/_breakpoints.scss
+@mixin xxl-up {
+  @media (min-width: #{$screen-xxl-min}) {
+    @content;
+  }
+}
+
+/// Media query for a max size of $screen-xl-min set inside settings > breakpoints
+/// @example .foo { @include xl-up {...} }
+/// @require settings/_breakpoints.scss
+@mixin xxxl-up {
+  @media (min-width: #{$screen-xxxl-min}) {
+    @content;
+  }
+}
+
+
+/// It is unlikely that you'll ever use this as you should be building the site with a mobile up approach. Therefore phone portrait should be the default, with styles then overwritten down the cascade using the mixins below.
+///
+/// $screen-xs-min set inside settings > breakpoints
+/// @example .foo { @include xs-down; }
+/// @require settings/_breakpoints.scss
+@mixin xs-down {
+  @media (max-width: #{$screen-xs-min}) {
+    @content;
+  }
+}
+
+/// Media query for a max size of $screen-sm-max set inside settings > breakpoints
+/// @example .foo { @include sm-down {...} }
+/// @require settings/_breakpoints.scss
+@mixin sm-down {
+  @media (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+/// Media query for a max size of $screen-md-max set inside settings > breakpoints
+/// @example .foo { @include md-down {...} }
+/// @require settings/_breakpoints.scss
+@mixin md-down {
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+/// Media query for a max size of $screen-lg-max set inside settings > breakpoints
+/// @example .foo { @include lg-down {...} }
+/// @require settings/_breakpoints.scss
+@mixin lg-down {
+  @media (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+/// Media query for a max size of $screen-xl-max set inside settings > breakpoints
+/// @example .foo { @include xl-down {...} }
+/// @require settings/_breakpoints.scss
+@mixin xl-down {
+  @media (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+
+/**
+  CLEARFIX MIXIN
+*/
+@mixin cf {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/**
+  FONT SIZE & LINE HEIGHT
+*/
+@mixin font-size($sizeValue: 1.6, $line: $sizeValue * 1.5) {
+	font-size: ($sizeValue * 1) + px;
+	line-height: ($line * 1) + px;
+	font-size: ($sizeValue / 10) + rem;
+	line-height: ($line / 10) + rem;
+}
+
+
+/* Flexbox
+--------------------------------------------------------------- */
+
+@mixin flexbox {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flexbox-inline {
+	display: -ms-inline-flexbox;
+	display: -webkit-inline-flex;
+    display: inline-flex;
+}
+
+@mixin flex-wrap($value) {
+	-ms-flex-wrap: $value;
+	-webkit-flex-wrap: $value;
+	flex-wrap: $value;
+}
+
+@mixin flex-direction($value) {
+	-ms-flex-direction: $value;
+	-webkit-flex-direction: $value;
+	flex-direction: $value;
+}
+
+@mixin flex-flow($value) {
+	-ms-flex-flow: $value;
+	-webkit-flex-flow: $value;
+	flex-flow: $value;
+}
+
+@mixin flex($value) {
+	-ms-flex: $value;
+	-webkit-flex: $value;
+	flex: $value;
+}
+
+@mixin flex-grow($value) {
+	-ms-flex-grow: $value;
+	-webkit-flex-grow: $value;
+	flex-grow: $value;
+}
+
+@mixin order($value) {
+	-ms-flex-order: $value;
+	-webkit-order: $value;
+	order: $value;
+}
+
+@mixin justify-content($value) {
+
+	@if $value == flex-start { -ms-flex-pack: start; }
+	@elseif $value == flex-end { -ms-flex-pack: end; }
+	@elseif $value == center { -ms-flex-pack: center; }
+	@elseif $value == space-between { -ms-flex-pack: justify; }
+	@elseif $value == space-around { -ms-flex-pack: distribute; }
+
+	-webkit-justify-content: $value;
+	justify-content: $value;
+}
+
+@mixin align-content($value) {
+
+	@if $value == flex-start { -ms-flex-line-pack: start; }
+	@elseif $value == flex-end { -ms-flex-line-pack: end; }
+	@elseif $value == center { -ms-flex-line-pack: center; }
+	@elseif $value == space-between { -ms-flex-line-pack: justify; }
+	@elseif $value == space-around { -ms-flex-line-pack: distribute; }
+	@elseif $value == stretch { -ms-flex-line-pack: stretch; }
+
+	-webkit-align-content: $value;
+	align-content: $value;
+}
+
+@mixin align-items($value) {
+
+	@if $value == flex-start { -ms-flex-align: start; }
+	@elseif $value == flex-end { -ms-flex-align: end; }
+	@elseif $value == center { -ms-flex-align: center; }
+	@elseif $value == baseline { -ms-flex-align: baseline; }
+	@elseif $value == stretch { -ms-flex-align: stretch; }
+
+	-webkit-align-items: $value;
+	align-items: $value;
+}
+
+@mixin align-self($value) {
+
+	@if $value == flex-start { -ms-flex-item-align: start; }
+	@elseif $value == flex-end { -ms-flex-item-align: end; }
+	@elseif $value == center { -ms-flex-item-align: center; }
+	@elseif $value == baseline { -ms-flex-item-align: baseline; }
+	@elseif $value == stretch { -ms-flex-item-align: stretch; }
+
+	-webkit-align-self: $value;
+	align-self: $value;
+}

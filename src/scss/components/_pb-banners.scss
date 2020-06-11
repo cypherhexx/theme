@@ -1,0 +1,28 @@
+.banner {
+	position: relative;
+	color: $White;
+	
+	&--75 {
+		height: 100vh;
+
+		@include md-up { height: 75vh; }
+
+	}
+
+	&--100 { height: 100vh; }
+
+}
+
+.banner .overlay {
+	position: absolute; 
+	display: flex;
+
+	&--dark {
+		//background: rgba($primary, .65);
+	}
+
+	&--primary.overlay--dark {
+		//background-color: $primary;
+	}
+}
+

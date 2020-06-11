@@ -1,0 +1,83 @@
+//
+//
+// The SASS setup on this site uses the .scss variant of Sass.
+//
+// Gulp uses the file and compiles all of the scss into one css file for the entire site.
+//
+// Please be aware that it uses the inverted triangle approach, OOCSS and BEM
+//
+// If you are not familiar with any of these methodologies then you must read the following documentation.
+//
+// Inverted Triangle:
+// https://www.slideshare.net/JulieKuehl/css-sanity-with-sass-the-inverted-triangle-approach
+//
+// OOCSS:
+// https://www.slideshare.net/stubbornella/object-oriented-css
+//
+// BEM:
+// http://getbem.com/introduction/
+//
+//
+
+// SETTINGS
+@import 'settings/fonts';
+@import 'settings/colors';
+
+// TOOLS
+@import 'tools/mixins';
+@import 'tools/functions';
+
+// GENERIC
+@import 'generic/normalize';
+//@import 'generic/classes'; // In critical.scss
+@import 'generic/wp-align-classes';
+
+// ELEMENTS
+//@import 'elements/html'; // In critical.scss
+
+// OBJECTS
+//@import 'objects/global'; // In critical.scss
+//@import 'objects/theme'; // In critical.scss
+//@import 'objects/grid'; // In critical.scss
+@import 'objects/forms';
+//@import 'objects/animations'; // In critical.scss
+
+// COMPONENTS
+//@import 'components/ctas'; // In critical.scss
+@import 'components/mobile-nav';
+//@import 'components/header'; // In critical.scss
+//@import 'components/hero'; // In critical.scss
+@import 'components/gdpr';
+@import 'components/pb-banners';
+@import 'components/pb-banners-full-bleed';
+@import 'components/pb-copy';
+@import 'components/pb-copy-blocks';
+@import 'components/pb-copy-only';
+//@import 'components/pb-copy-image'; // In critical.scss
+@import 'components/pb-copy-image-boxed';
+@import 'components/pb-full-width-video';
+@import 'components/pb-google-maps';
+@import 'components/pb-gallery';
+@import 'components/pb-image-blocks-with-text-overlay';
+@import 'components/pb-copy-form';
+@import 'components/pb-tabbed-content';
+@import 'components/pb-scroll-to-section-menu';
+@import 'components/pb-featured-case-studies';
+@import 'components/pb-testimonials';
+@import 'components/pb-our-partners';
+@import 'components/carousel';
+@import 'components/pb-our-clients';
+@import 'components/pb-logo-grid';
+@import 'components/media-blocks';
+@import 'components/about-content';
+@import 'components/meet-the-team';
+@import 'components/awards';
+@import 'components/our-offices';
+@import 'components/post-blog';
+@import 'components/post-case-study';
+@import 'components/blog-filters';
+@import 'components/blog-author';
+@import 'components/blog-pagination';
+@import 'components/footer';
+
+// TRUMPS

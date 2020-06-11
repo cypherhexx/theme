@@ -1,0 +1,31 @@
+//
+//
+// Critical CSS to be inlined in the <head>
+//
+//
+
+// SETTINGS
+@import 'settings/fonts';
+@import 'settings/colors';
+
+// TOOLS
+@import 'tools/mixins';
+
+// GENERIC
+@import 'generic/classes';
+
+// ELEMENTS
+@import 'elements/html';
+
+// OBJECTS
+@import 'objects/global';
+@import 'objects/theme';
+@import 'objects/grid';
+@import 'objects/animations';
+
+// COMPONENTS
+@import 'components/ctas';
+@import 'components/country-selector';
+@import 'components/header';
+@import 'components/hero';
+@import 'components/pb-copy-image';

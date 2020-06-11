@@ -1,0 +1,32 @@
+// --------------------------------------------------------------------------------------------------
+// Blog Pagination
+// --------------------------------------------------------------------------------------------------
+
+.wp-paginate li {
+    display: inline;
+    list-style: none;
+}
+
+.wp-paginate.wp-paginate a {
+    background: $primary;
+    color: #fff;
+    margin-right: 4px;
+    padding: 6px 14px;
+    text-align: center;
+    text-decoration: none;
+    width: 38px;
+}
+ 
+.wp-paginate a:hover,
+.wp-paginate a:active {
+    background: lighten($primary, 6%);
+    color: #fff;
+}
+ 
+.wp-paginate .current {
+    color: #fff;
+    background: $highlightGreen;
+    margin-right: 4px;
+    padding: 6px 14px;
+    width: 38px;
+}

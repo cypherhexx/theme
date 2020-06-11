@@ -1,0 +1,147 @@
+// --------------------------------------------------------------------------------------------------
+// Case Study Item
+// --------------------------------------------------------------------------------------------------
+
+.case-studies-list-wrap {
+    position: relative;
+
+    h2 {
+        padding-left: 20px;
+        text-align: center;
+    }
+}
+
+.case-studies-list--sectioned {
+    margin: 0 0 40px;
+    padding-left: 20px;
+    overflow-x: scroll;
+
+    + a {
+        color: $highlightGreen;
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+
+    li {
+        margin-top: 30px;
+
+        @include md-up {
+            margin-top: 45px;
+        }
+    }
+
+    @include md-up {
+        margin: 0 0 55px;
+    }
+
+    &:after {
+        content: ".";
+        width: 0;
+        height: 200px;
+        display: block;
+        opacity: 0;
+    }
+
+    &.count-3 {
+        @include xl-up {
+            @include justify-content(center);
+        }
+    }
+}
+
+.post--case-study {
+    @include flex-direction(column);
+    @include flex(none);
+    margin-bottom: 40px;
+    width: 80%;
+    max-width: 390px;
+    margin-right: 20px;
+
+    &:last-child {
+        margin-right: 20px;
+    }
+
+    .grid--mob-side-by-side & {
+        margin-bottom: 0;
+    }
+
+    @include sm-up {
+        margin-right: 50px;
+    }
+
+    &__img {
+        display: block;
+        box-shadow: 3px 5px 15px rgba(#000, .1);
+        border-radius: 20px;
+    }
+
+    &__copy {
+        @include flex-direction(column);
+        @include align-items(flex-start);
+        @include flex(1);
+    }
+
+    &__title {
+        margin: 25px 0 0;
+        font-size: 1.3rem;
+        font-family: Museo;
+        font-weight: 900;
+
+        @include xl-up {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__title-link {
+        text-decoration: none;
+        transition: .25s;
+        color: $highlightPink;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    &__cat {
+        color: $highlightGreen;
+        margin: 5px 0 0;
+        font-size: 1.2rem;
+        font-weight: 300;
+        font-style: italic;
+        
+        a {
+            text-decoration: none;
+            color: $primary;
+            font-weight: 700;
+        }
+    }
+
+    &__desc {
+        font-weight: 300;
+        margin: 20px 0;
+        font-size: 1rem;
+        line-height: 1.4;
+
+        @include lg-up {
+            margin: 20px 0 30px;
+            font-size: 1.1rem;
+        }
+    }
+
+    &__cta {
+        margin-top: auto;
+    }
+}
+
+.section--app-download {
+    p {
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+
+    img {
+        @include md-up {
+            margin: 20px 20px 0;
+        }
+    }
+}

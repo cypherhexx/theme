@@ -1,0 +1,153 @@
+// --------------------------------------------------------------------------------------------------
+// Header
+// --------------------------------------------------------------------------------------------------
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    transition: background .3s;
+    z-index: 1000;
+
+    @include lg-up {
+        padding: 20px;
+    }
+
+    &--sticky {
+        position: fixed;
+        background-color: $primary;
+        position: fixed;
+    }
+
+    &--sticky-0 {
+        top: 0 !important;
+    }
+
+    &__contact-cta {
+        display: none;
+        margin-left: auto;
+
+        @include md-up {
+            display: block;
+        }
+    }
+}
+
+.mob-nav-toggle {
+    margin-left: auto;
+
+    .icon {
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    @include md-up {
+        display: none;
+    }
+}
+
+.site-logo__img {
+    width: 130px;
+    display: block;
+
+    @include md-up {
+        width: 100px;
+    }
+
+    @include lg-up {
+        width: 130px;
+    }
+}
+
+
+// DESKTOP NAV
+.desktop-nav {
+    display: none;
+
+    @include md-up {
+        display: block;
+        margin-left: 20px;
+    }
+
+    @include lg-up {
+        margin-left: 30px;
+    }
+
+    > ul > li {
+        display: inline-block;
+        position: relative;
+
+        &:hover > a {
+            color: $highlightPink;
+        }
+
+        &.menu-item--active > a {
+            color: $highlightPink;
+            text-decoration: underline;
+        }
+    }
+
+    // Hide Home and Contact links from desktop nav
+    > ul > li:first-child,
+    > ul > li:last-child {
+        display: none;
+    }
+
+    > ul > li > a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 8px 6px;
+        font-weight: 300;
+        font-size: .85rem;
+
+        @include lg-up {
+            padding: 12px 14px;
+            font-size: .9rem;
+        }
+    }
+
+    .sub-menu {
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: lighten($primary, 5%);
+        box-shadow: 0 5px 10px rgba(#000, .1);
+        border-radius: 20px;
+        overflow: hidden;
+
+        a {
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid rgba(#fff, .07);
+            white-space: nowrap;
+            transition: .3s;
+            font-size: .9rem;
+
+            &:hover {
+                background-color: lighten($primary, 3%);
+            }
+        }
+
+        li.menu-item--active a {
+            color: $highlightPink;
+        }
+
+        li:last-child a {
+            border-bottom: none;
+        }
+    }
+}
+
+.desktop-nav > ul > li > a:hover + .sub-menu,
+.desktop-nav .sub-menu:hover {
+    opacity: 1;
+    visibility: visible;
+}

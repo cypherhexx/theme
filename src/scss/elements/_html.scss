@@ -1,0 +1,214 @@
+/// GLOBAL HTML Elements
+html {
+	font-size: 100%;
+}
+
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	min-height: 100%;
+}
+
+// div {}
+
+// span {}
+
+iframe {
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+}
+
+// bdo {}
+
+/**
+	HTML 5 Elements
+*/
+header {
+	display: block;
+}
+
+nav {
+	display: block;
+}
+
+section {
+	display: block;
+}
+
+article {
+	display: block;
+}
+
+aside {
+	display: block;
+}
+
+main {
+	display: block;
+	min-height: calc(100vh - 112px);
+}
+
+footer {
+	display: block;
+}
+
+video {
+	display: block;
+}
+
+/**
+	HEADERS
+*/
+// h1 {
+
+// }
+
+// h2 {
+
+// }
+
+// h3 {
+
+// }
+
+// h4 {
+
+// }
+
+// h5 {
+
+// }
+
+// h6 {
+
+// }
+
+/**
+ LISTS
+*/
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+ol {
+	padding: 0;
+	margin: 0;
+}
+
+// li {}
+
+// dl {}
+
+// dt {}
+
+// dd {}
+
+/*
+	TEXT FORMATTING
+*/
+// a {}
+
+p {
+	line-height: 1.4;
+}
+
+// strong {}
+
+// b {}
+
+// em {}
+
+// i {}
+
+// small {}
+
+// address {}
+
+// br {}
+
+// hr {}
+
+// sub {}
+
+// sup {}
+
+// mark {}
+
+// del {}
+
+// ins {}
+
+// abbr {}
+
+// code {}
+
+// pre {}
+
+/**
+	QUOTES
+*/
+// blockquote {}
+
+// cite {}
+
+/**
+	IMAGES
+*/
+img {
+	max-width: 100%;
+}
+
+// figure {}
+
+// figcaption {}
+
+// map {}
+
+/**
+	TABLES
+*/
+// table {}
+
+// thead {}
+
+// tfoot {}
+
+// th {}
+
+// tbody {}
+
+// tr {}
+
+// td {}
+
+/**
+	FORMS
+**/
+// form {}
+
+// fieldset {}
+
+// legend {}
+
+// label {}
+
+// input {}
+
+// textarea {}
+
+// select {}
+
+// datalist {}
+
+// output {}
+
+button {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+	border: none;
+    padding: 0;
+    background: none;
+}

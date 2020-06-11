@@ -1,0 +1,61 @@
+// --------------------------------------------------------------------------------------------------
+// About Page Content Sections
+// --------------------------------------------------------------------------------------------------
+
+.section--about-content {
+    @include lg-up {
+        padding: 90px 0;
+    }
+
+    .section__header {
+        @include lg-up {
+            font-size: 3rem;
+        }
+
+        @include xl-up {
+            font-size: 3.4rem;
+        }
+    }
+}
+
+.about-content__img {
+    box-shadow: 5px 5px 10px rgba($primary, .3);
+    margin: 20px 0;
+
+    @include md-up {
+        margin: 40px 0 0;
+    }
+}
+
+.section--about-content.section--2 {
+
+    @include lg-up {
+
+        .about-content__img--1 {
+            transform: translateY(120px);
+            max-width: 130%;
+        }
+
+        .about-content__img--2 {
+            transform: translateX(-50px) translateY(160px);
+            margin-top: 120px;
+        }
+    }
+}
+
+.section--about-content.section--3 {
+
+    @include lg-up {
+
+        .block:first-child {
+            position: relative;
+        }
+
+        .about-content__img--1 {
+            position: absolute;
+            top: 80px;
+            left: 0;
+            max-width: 85%;
+        }
+    }
+}

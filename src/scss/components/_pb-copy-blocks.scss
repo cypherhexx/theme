@@ -1,0 +1,316 @@
+// --------------------------------------------------------------------------------------------------
+// Page Builder - Copy Blocks
+// --------------------------------------------------------------------------------------------------
+
+.section--copy-blocks {
+
+    &.align--full-width {
+        padding-bottom: 0;
+        text-align: center;
+    }
+
+    .section__header + .grid {
+        margin-top: 20px;
+
+        @include md-up {
+            margin-top: 40px;
+        }
+    }
+}
+
+// For when the copy blocks need to be stacked on top of each other on mobile
+.copy-block--mob-stacked {
+    margin-bottom: 40px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include md-up {
+        margin-bottom: 0;
+    }
+}
+
+// For when the copy blocks need to be positioned side-by-side on mobile and swipable
+@include md-down {
+    .copy-blocks--mob-side-by-side {
+
+        .container {
+            padding-right: 0;
+            padding-left: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    .grid--mob-side-by-side {
+        @include flex-wrap(nowrap);
+        overflow-x: scroll;
+        padding: 20px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE10+ */
+
+        &::-webkit-scrollbar { 
+            display: none; 
+        }
+
+        .block {
+            @include flex(none);
+            width: 85%;
+            max-width: 350px;
+            padding: 25px;
+            margin-right: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,.1);
+        }
+    }
+}
+
+.copy-block {
+    @include flex-direction(column);
+    transition: .3s;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 20px;
+    
+    @include md-up {
+        padding: 25px;
+        max-width: 400px;
+
+        &:not(.no-hover):hover,
+        &.active {
+            box-shadow: 0 0 20px rgba(0,0,0,.08);
+        }
+    }
+
+    @include lg-up {
+        padding: 40px;
+    }
+
+    &__img-wrap {
+        width: 100%;
+        height: 130px;
+        padding-bottom: 30px;
+
+        @include sm-up {
+            height: 200px;
+        }
+
+        @include xl-up {
+            padding-bottom: 40px;
+        }
+    }
+
+    &__img-wrap--tall {
+        height: 250px;
+
+        @include sm-up {
+            height: 350px;
+        }
+    }
+
+    img {
+        padding: 0 15px;
+        -webkit-filter: drop-shadow(2px 7px 5px rgba(0,0,0,.1));
+        filter: drop-shadow(2px 7px 5px rgba(0,0,0,.1));
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0 auto;
+
+        @include xl-up {
+            padding: 0 25px;
+        }
+    }
+
+    img[src$=".svg"] {
+        width: 100%;
+        max-height: 100%;
+    }
+
+    &__text-wrap {
+        @include flex-direction(column);
+        @include flex(1);
+    }
+
+    &__title {
+        margin: 0 0 15px;
+        color: $highlightPink;
+        font-size: 1.3rem;
+        font-family: Museo;
+        font-weight: 900;
+        line-height: 1.2;
+        width: 100%;
+    }
+
+    p {
+        margin: 0 0 30px;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    .cta {
+        margin-top: auto;
+        min-width: 150px;
+    }
+}
+
+a.copy-block:not(.theme--primary) p {
+    color: $primary;
+}
+
+
+.copy-block--no-padding {
+    padding: 0;
+    overflow: hidden;
+
+    .copy-block__text-wrap {
+        padding: 0 15px 15px;
+    
+        @include md-up {
+            padding: 0 25px 25px;
+        }
+
+        @include lg-up {
+            padding: 0 40px 40px;
+        }
+    }
+
+    .copy-block__img-wrap {
+        height: 200px;
+
+        @include sm-up {
+            height: 240px;
+        }
+    }
+
+    img {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        object-fit: cover;
+        filter: none;
+    }
+}
+
+
+// For copy blocks with background colours
+.copy-block--boxed {
+    padding: 25px;
+
+    @include lg-up {
+        padding: 40px;
+    }
+}
+
+
+// Full width copy blocks (e.g. Enterprise vs Pro section on How We Work page
+.copy-block--full {
+    margin: 0;
+    max-width: none;
+
+    @include md-up {
+        padding: 45px;
+    }
+
+    @include lg-up {
+        padding: 100px 60px;
+    }
+
+    > * {
+        max-width: 400px;
+    }
+
+    &.theme--alternative + &.theme--alternative {
+        background-color: darken($alternative, 5%);
+    }
+}
+
+
+// Modified for How We Deliver section (on Verticals sub pages
+.copy-block--hwd {
+    @include md-up {
+        position: relative;
+        z-index: 1;
+
+        &:nth-child(2):before,
+        &:nth-child(2):after {
+            content: "";
+            position: absolute;
+            top: 110px;
+            left: -3%;
+            width: 40px;
+            height: 0;
+            border-top: 4px dotted #fff;
+            z-index: -1;
+        }
+        &:nth-child(2):after {
+            left: auto;
+            right: -3%;
+        }
+    }
+
+    @include lg-up {
+        padding: 25px;
+
+        &:nth-child(2):before,
+        &:nth-child(2):after {
+            content: "";
+            top: 140px;
+            left: -3%;
+        }
+        &:nth-child(2):after {
+            left: auto;
+            right: -3%;
+        }
+    }
+
+    @include xl-up {
+        padding: 25px;
+
+        &:nth-child(2):before,
+        &:nth-child(2):after {
+            content: "";
+            top: 135px;
+            left: 0;
+            width: 60px;
+        }
+        &:nth-child(2):after {
+            left: auto;
+            right: 0;
+        }
+    }
+}
+
+.copy-block__img-wrap--hwd {
+    height: 220px;
+    // border-radius: 50%;
+    // background-color: #fff;
+    // width: 130px;
+    // justify-content: center;
+    // height: 130px;
+    // padding: 0;
+    // margin-bottom: 25px;
+
+    // @include md-up {
+    //     margin-bottom: 45px;
+    // }
+
+    @include lg-up {
+        height: 290px;
+    }
+
+    img {
+        // max-width: 140%;
+        max-height: 100%;
+        width: auto;
+        padding: 0;
+    }
+}
+
+.copy-block__title--hwd {
+    color: #fff;
+}

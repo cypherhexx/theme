@@ -1,0 +1,70 @@
+// --------------------------------------------------------------------------------------------------
+// Media Blocks
+// e.g. uses: Job Vacancies, In The Press
+// --------------------------------------------------------------------------------------------------
+
+.section--scrollable {
+    width: 100%;
+    overflow: hidden;
+    
+    .section__header {
+        margin-top: 20px;
+    }
+}
+
+.media-blocks-wrap--scrollable {
+    margin-top: 30px;
+    padding: 20px 0 20px 20px;
+
+    @include md-up {
+        @include flex-wrap(nowrap);
+        margin-top: 50px;
+    }
+}
+
+.media-block {
+    box-shadow: 3px 5px 20px rgba($primary,.1);
+    padding: 25px;
+    max-width: 400px;
+    @include flex(none);
+    margin-right: 20px;
+    @include flexbox;
+    @include align-items(flex-start);
+    @include flex-direction(column);
+    border-radius: 20px;
+
+    @include md-up {
+        margin: 0 15px;
+        padding: 35px;
+    }
+
+    &__logo {
+        max-width: 50%;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-family: Museo;
+        font-weight: 900;
+        margin: 0;
+    }
+
+    &__meta {
+        color: $highlightGreen;
+        font-weight: 700;
+        margin: 15px 0 20px;
+    }
+
+    &__desc {
+        margin-bottom: 30px;
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.4;
+
+        p {
+            margin: 0;
+            line-height: 1.4;
+        }
+    }
+}

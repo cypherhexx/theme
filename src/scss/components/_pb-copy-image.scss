@@ -1,0 +1,67 @@
+// --------------------------------------------------------------------------------------------------
+// Page Builder - Copy & Image
+// --------------------------------------------------------------------------------------------------
+
+.section--copy-image {
+    text-align: center;
+    position: relative;
+
+    @include md-up {
+        text-align: left;
+    }
+
+    img[src$=".svg"] {
+        width: 100%;
+        height: 95%;
+        
+        @include md-up {
+            max-height: 480px;
+            max-width: 480px;
+        }
+    }
+
+    video {
+        max-height: 100%;
+        //box-shadow: 0 0 100px #2d2552, 0 0 100px #2d2552, 0 0 50px #2d2552;
+    }
+
+    ul {
+        list-style: inside;
+
+        @include md-up {
+            list-style: outside;
+        }
+    }
+
+    .block--2-col + .block--2-col {
+        margin-top: 25px;
+
+        @include md-up {
+            margin-top: 0;
+        }
+    }
+}
+
+/*
+// CSS Selector hacks to target different browsers and match the bg colour to the video colour
+.theme--primary.section--has-video:not(*:root) { background-color: #2d2552; }
+@-moz-document url-prefix() { .theme--primary.section--has-video { background-color: #271e45; } }
+*/
+
+.section__header--copy-image {
+    font-weight: 900;
+}
+
+.section__copy--copy-image {
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include md-up {
+        margin: 0;
+    }
+
+    @include lg-up {
+        margin-top: 30px;
+    }
+}

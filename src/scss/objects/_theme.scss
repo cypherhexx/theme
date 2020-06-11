@@ -1,0 +1,55 @@
+.theme {
+	
+	&--primary { 
+		background-color: $primary;
+		color: $White;
+
+		//.overlay { color: $White; }
+
+		.section__copy a:not(.cta) {
+			color: $White;
+		}
+
+		+ .theme--primary {
+			border-top: 1px solid rgba(#fff,.1);
+		}
+
+	}
+
+	&--primary-tint {
+		background-color: $primaryTint;
+		color: $White;
+	}
+
+	&--secondary {
+		background-color: $secondary;
+		color: $primary;
+
+		.section__copy a:not(.cta) {
+			color: $primary;
+		}
+
+		// Add faint top border when it follows another section with a white background
+		+ .theme--secondary {
+			border-top: 1px solid #eee;
+		}
+	}
+
+	&--alternative { 
+		background-color: $alternative;
+		color: $primary; 
+
+		//.overlay { color: $White; }
+
+		.section__copy a:not(.cta) {
+			color: $primary;
+		}
+		
+	}
+
+}
+
+.section.theme--alternative + .section.theme--alternative,
+.section--copy-image-boxed + .theme--alternative {
+	box-shadow: inset 0 0px 10px rgba(0,0,0,.1);
+}

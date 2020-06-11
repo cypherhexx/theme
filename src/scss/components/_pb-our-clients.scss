@@ -1,0 +1,62 @@
+// --------------------------------------------------------------------------------------------------
+// Page Builder - Our Clients
+// --------------------------------------------------------------------------------------------------
+
+.section--our-clients {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    @include xl-up {
+        padding: 90px 0 105px;
+    }
+}
+
+.section__header--our-clients {
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: $primary;
+
+    @include lg-up {
+        margin-bottom: 20px;
+    }
+}
+
+.our-clients__logos {
+    @include flex-wrap(nowrap);
+    overflow-x: scroll;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.our-clients__logo-block {
+    @include flex(none);
+    border-radius: 20px;
+    margin: 0 10px;
+    width: 200px;
+    height: 170px;
+    transition: .5s;
+
+    @include lg-up {
+        margin: 0 15px;
+    }
+
+    &:hover {
+        box-shadow: 3px 5px 15px rgba(#000,.1);
+
+        .our-clients__logo {
+            -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+            opacity: 1;
+        }
+    }
+}
+
+.our-clients__logo {
+    width: 200px;
+    padding: 25px;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    opacity: .4;
+    transition: .5s;
+}

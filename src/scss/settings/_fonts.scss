@@ -1,0 +1,37 @@
+$primaryFont: "Lab Grotesque";
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  src: url('/wp-content/themes/livestyled/assets/fonts/LabGrotesque-Regular.woff2') format('woff2'),
+       url('/wp-content/themes/livestyled/assets/fonts/LabGrotesque-Regular.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  src: url('/wp-content/themes/livestyled/assets/fonts/LabGrotesque-Italic.woff2') format('woff2'),
+       url('/wp-content/themes/livestyled/assets/fonts/LabGrotesque-Italic.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  src: url('/wp-content/themes/livestyled/assets/fonts/LabGrotesque-Light.woff2') format('woff2'),
+       url('/wp-content/themes/livestyled/assets/fonts/LabGrotesque-Light.woff') format('woff');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lab Grotesque';
+  src: url('/wp-content/themes/livestyled/assets/fonts/LabGrotesque-Bold.woff2') format('woff2'),
+       url('/wp-content/themes/livestyled/assets/fonts/LabGrotesque-Bold.woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}

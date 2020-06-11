@@ -1,0 +1,39 @@
+// --------------------------------------------------------------------------------------------------
+// Page Builder - Scroll to Section Menu
+// --------------------------------------------------------------------------------------------------
+
+.section--scroll-menu.section--scroll-menu {
+    border: none;
+    padding: 0 0 20px;
+
+    @include md-up {
+        padding: 20px 0 30px;
+    }
+}
+
+.scroll-menu {
+
+    &__list {
+        @include flexbox-inline;
+        border-radius: 30px;
+        border: 2px solid $highlightPink;
+        list-style: none;
+        padding: 15px 20px;
+        overflow-x: scroll;
+        max-width: 100%;
+    }
+
+    &__list-item {
+        display: inline-block;
+    }
+
+    &__link {
+        color: $highlightPink;
+        text-decoration: none;
+        padding: 5px 20px;
+
+        &:hover {
+            color: darken($highlightPink, 7%);
+        }
+    }
+}

@@ -1,0 +1,264 @@
+// --------------------------------------------------------------------------------------------------
+// Hero
+// This CSS is designed to adjust the first section on the page to be the "hero" section, whether
+// it's the 'Copy & Image' module, or the 'Full Bleed Banner' module etc.
+// It applies the padding-top required to accommodate the fixed header, and is given a 100vh height
+// --------------------------------------------------------------------------------------------------
+
+.global-main > .section--1 {
+    padding: 100px 0 50px;
+
+    @include md-up {
+        padding: 130px 0 100px;
+    }
+
+    > .container {
+        min-height: 100vh;
+    }
+    
+    &.section--copy-image {
+        padding: 30px 0 0;
+
+        @include md-up {
+            padding-top: 0;
+        }
+
+        > .container {
+            height: calc(100vh - 30px);
+            min-height: auto;
+            padding-top: 0;
+
+            @include md-up {
+                height: 100vh;
+                padding-top: 20px;
+            }
+
+            @include xxxl-up {
+                //max-width: 1400px;
+            }
+        }
+
+        img, video {
+            height: 190px;
+
+            @include md-up {
+                height: auto;
+            }
+
+            @include lg-up {
+                padding-top: 40px;
+            }
+        }
+    }
+
+    // To accommodate copy & image on mobile
+	.grid--2 {
+        height: 100%;
+        @include align-content(center);
+        
+        @include md-up {
+            height: auto;
+        }
+
+		> .block:first-child {
+            //height: 35%;
+            padding-bottom: 15px;
+            
+            @include md-up {
+                height: auto;
+                height: 85%;
+                padding-bottom: 0;
+
+                &.block--video {
+                    height: 100%;
+                }
+            }
+		}
+
+		> .block:last-child {
+            height: 57%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            @include md-up {
+                height: auto;
+            }
+		}
+    }
+
+    .section__header {
+        font-size: 2rem;
+
+        @include md-up {
+            font-size: 2.5rem;
+        }
+
+        @include lg-up {
+            font-size: 2.7rem;
+        }
+
+        @include xl-up {
+            font-size: 3.3rem;
+        }
+    }
+
+    .section__sub-header {
+        text-transform: uppercase;
+    
+        @include md-down {
+            font-size: 1.05rem;
+        }
+    }
+
+    .cta + .cta {
+        @include md-up {
+            margin-left: 5px;
+        }
+
+        @include lg-up {
+            margin-left: 20px;
+        }
+    }
+
+    img {
+        max-height: 100%;
+    }
+}
+
+.hero__video {
+    display: none;
+
+    @include md-up {
+        display: block;
+    }
+}
+
+.hero__img--video-fallback {
+    @include md-up {
+        display: none;
+    }
+}
+
+
+// Blog Hero (or any hero that uses the full banner module)
+.global-main > .banner--1 {
+    
+    .section__header {
+        text-transform: none;
+        font-weight: 900;
+        font-size: 2rem;
+
+        @include md-up {
+            font-size: 2.5rem;
+        }
+
+        @include lg-up {
+            font-size: 2.7rem;
+        }
+
+        @include xl-up {
+            font-size: 3.4rem;
+        }
+    }
+
+    .banner__copy {
+        font-size: 1.1rem;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto 30px;
+
+        @include xl-up {
+            font-size: 1.3rem;;
+        }
+    }
+}
+
+.blog-hero__date {
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-top: 40px;
+}
+
+.container--blog-hero {
+    max-width: 700px;
+    margin: 0 auto;
+
+    @include sm-up {
+        padding: 0 40px;
+    }
+    
+    @include xl-up {
+        max-width: 800px;
+    }
+}
+
+// Social Icons
+.hero-social {
+    position: absolute;
+    top: 100vh;
+    left: 20px;
+    z-index: 100;
+    list-style: none;
+    transform: translateY(calc(-100% - 50px));
+    opacity: 0;
+    visibility: hidden;
+
+    @include md-up {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__link {
+        color: #fff;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        font-size: .85em;
+        margin-top: 20px;
+        transition: .3s;
+
+        &:hover {
+            color: $highlightGreen;
+            border-color: $highlightGreen;
+        }
+    }
+    
+    .icon-linkedin {
+        margin-left: 3px;
+    }
+}
+
+
+// Hero Scroll Arrow
+.scroll-arrow {
+    background: transparent;
+    border: none;
+	position: absolute;
+	bottom: 20px;
+    left: 50%;
+    width: 25px;
+	z-index: 2;
+	-webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 2.7em;
+    transition: opacity .3s;
+    cursor: pointer;
+    -webkit-appearance: none;
+
+    @include md-up {
+        display: inline-block !important; // Critical CSS override
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+
+    &:hover {
+        opacity: .7;
+    }
+
+}

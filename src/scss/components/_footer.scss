@@ -1,0 +1,57 @@
+// --------------------------------------------------------------------------------------------------
+// Footer
+// --------------------------------------------------------------------------------------------------
+
+.footer {
+    padding: 30px;
+    color: #c5c4ce;
+    @include flex-direction(column);
+    text-align: center;
+    font-size: .9rem;
+
+    @include md-up {
+        @include flex-direction(row);
+    }
+
+    @include lg-up {
+        padding: 50px 70px;
+    }
+
+    p {
+        margin: 0 0 20px;
+
+        @include md-up {
+            margin: 0;
+        }
+    }
+
+    a:not(.cta) {
+        color: #c5c4ce;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.footer-links {
+    li {
+        @include md-up {
+            display: inline-block;
+
+            + li {
+                margin-left: 15px;
+            }
+        }
+    }
+
+    a {
+        padding: 5px 0;
+        display: inline-block;
+
+        @include md-up {
+            padding: 0;
+        }
+    }
+}

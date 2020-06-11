@@ -1,0 +1,83 @@
+form {
+    width: 100%;
+    margin: 0 auto;
+
+    .gfield {
+        margin-bottom: 23px;
+        position: relative;
+    }
+    
+    .validation_error {
+        display: none;
+    }
+
+    .validation_message {
+        padding: 4px 8px;
+        background-color: $highlightPink;
+        display: inline-block;
+        border-radius: 20px;
+        font-size: .8rem;
+        position: absolute;
+        top: -8px;
+        right: 15px;
+    }
+
+    label {
+        display: none;
+    }
+
+    input:not([type="submit"]),
+    select,
+    textarea {
+        border-radius: 30px;
+        border: none;
+        padding: 18px 25px;
+        display: block;
+        width: 100%;
+        font-size: 1.1rem;
+
+        &:focus,
+        &:active {
+            outline: none;
+            box-shadow: inset 3px 3px 10px rgba(#000,.2);
+        }
+    }
+
+    textarea {
+        height: 140px;
+    }
+
+    input[type="submit"],
+    button {
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        background: $highlightPink;
+        color: $White;
+        border-radius: 25px;
+        transition: .3s;
+        border: none;
+        @include font-size(11, 15);
+        padding: 12px 30px;
+        min-width: 180px;
+        transition: .3s;
+        float: right;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:focus,
+        &:active {
+            outline: none;
+            background-color: darken($highlightPink, 7%);
+        }
+    }
+}
+
+.gform_confirmation_message {
+    background-color: #3dbd9b;
+    padding: 10px 15px;
+    border-radius: 20px;
+    display: inline-block;
+}

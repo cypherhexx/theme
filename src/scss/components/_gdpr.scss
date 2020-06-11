@@ -1,0 +1,100 @@
+.section--gdpr {
+	display: flex !important; /* override critical css */
+	
+	@include font-size(10, 16);
+
+	transform: translateY(100%);
+	transition-timing-function: ease-in;
+	transition: .25s;
+	padding: 0;
+	bottom: 0;
+	left:0;
+	z-index: 2000;
+	position: fixed;
+	width: 100vw;
+	height: 60vh;
+	color: $White;
+	text-align: center;
+	visibility: hidden;
+	background: rgba(darken($primary,10%),.95);
+
+	@include lg-up {
+		height: auto;
+	}
+
+	&--active {
+		transform: translateY(0);
+		visibility: visible;
+	}
+
+}
+
+.section--gdpr-outer {
+	width: 100%;
+}
+
+.section--gdpr-inner {
+
+	font-size: 1.1rem;
+	color: #fff;
+	width: 100%;
+	max-width: 700px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 20px;
+	position: relative;
+	@include align-content(center);
+
+	.btn {
+		cursor: pointer;
+	}
+
+	.btn--accept {
+		background-color: #5bc386;
+		width: 100%;
+		margin-bottom: 10px;
+		max-width: 450px;
+		padding: 10px;
+
+		&:hover {
+			background-color: darken(#5bc386, 8%);
+			transform: scale(1);
+		}
+	}
+
+	a,
+	.btn--decline {
+		color: $highlightPink;
+		font-size: .75rem;
+		margin: 0 10px;
+		text-decoration: underline;
+		transition: .3s;
+
+		&:hover {
+			opacity: .8;
+		}
+	}
+
+	p {
+		margin: 0 0 20px;
+		font-size: .9rem;
+		line-height: 1.4;
+	}
+
+	@include md-up {
+		width: 100%;
+	}
+
+}
+
+.gdpr__header {
+	font-size: 1.5rem;
+	line-height: 1.3;
+	margin: 0 0 10px;
+}
+
+.gdpr__small-links {
+	width: 100%;
+}
+
+

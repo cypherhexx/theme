@@ -1,0 +1,120 @@
+// --------------------------------------------------------------------------------------------------
+// Page Builder - Tabbed Content
+// --------------------------------------------------------------------------------------------------
+
+.pb-tabbed {
+
+    &__nav {
+        overflow-x: scroll;
+        padding: 20px;
+
+        @include lg-up {
+            overflow: visible;
+        }
+    }
+
+    &__nav-item {
+        width: auto;
+        padding: 15px;
+        margin-right: 10px;
+        @include flex-direction(column);
+        transition: .3s;
+        cursor: pointer;
+        position: relative;
+        border-radius: 20px;
+
+        &:hover,
+        &.active {
+            box-shadow: 0 0 15px rgba($primary,.1);
+        }
+
+        @include lg-up {
+            width: 18%;
+            padding: 20px;
+            margin-right: 0;
+
+            &.active:after {
+                content: "";
+                width: 0; 
+                height: 0; 
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                border-bottom: 20px solid $alternative;
+                position: absolute;
+                bottom: -50px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    &__icon {
+        max-height: 62px;
+        margin-bottom: 15px;
+
+        @include lg-up {
+            max-height: 100px;
+        }
+    }
+
+    &__label {
+        font-size: 1.1rem;
+        font-weight: 650;
+        margin: auto;
+
+        @include lg-up {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__panels {
+        margin-top: 20px;
+        padding: 0 20px;
+
+        @include lg-up {
+            margin-top: 30px;
+        }
+    }
+
+    &__panel {
+        background-color: $alternative;
+        border-radius: 20px;
+        padding: 50px 20px 60px;
+        display: none;
+        font-size: 1rem;
+
+        p {
+            line-height: 1.4;
+        }
+
+        &.active {
+            display: block;
+        }
+
+        @include lg-up {
+            padding: 70px 60px 80px;
+        }
+    }
+
+    &__panel-content {
+        max-width: 700px;
+        margin: 0 auto;
+
+        h2 {
+            font-size: 2.2rem;
+            margin-top: 0;
+
+            @include md-up {
+                font-size: 2.8rem;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+
+        p + p {
+            margin-top: 1.4em;
+        }
+    }
+}

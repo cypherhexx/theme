@@ -1,0 +1,13 @@
+///
+/// @name Hamburger Menu
+/// @link https://jonsuh.com/hamburgers/
+
+$hamburger-padding-x: 20px;
+$hamburger-padding-y: 18px;
+$hamburger-layer-color: $White;
+$hamburger-layer-width: 30px;
+@import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers';
+
+.hamburger-box {
+	margin-top: 3px;
+}
