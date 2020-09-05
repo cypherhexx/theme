@@ -21,7 +21,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "jshint": "^2.9.7",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "rimraf": "^2.6.3",
     "run-sequence": "^2.2.1",
     "sassdoc": "^2.5.1"
